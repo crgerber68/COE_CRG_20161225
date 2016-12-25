@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="/capitalone/css/mymoney.css" rel="stylesheet" type="text/css"/>
+<script src="/capitalone/js/angular.js"></script> 
+<script src="/capitalone/js/jsonpath.js"></script> 
+<script src="/capitalone/js/mymoney.js"></script>
+<title>Capital One: My Money Application</title>
+</head>
+<body> 
+<div id="dashboard" ng-app="capOneApp" ng-controller="myMoneyCtrl">
+<div id="transactionFilter">
+<span><input ng-model="ignoreDonuts" ng-click="load()" type='checkbox'/>Ignore Donuts</span>
+<span><input ng-model="crystalBall" ng-click="load()" type='checkbox'/>Crystal Ball</span>
+</div>
+<div id="monthlyTransactions">
+<table>
+  <tr><th>Month</th><th>Spent</th><th>Income</th></tr>
+  <tr ng-repeat="monthly in monthlys" ng-if="monthly.name != 'average'">
+      <td>{{monthly.name}}</td><td money="{{monthly.spent | currency:'$':0}}"></td><td money="{{monthly.income | currency:'$':0}}"></td>
+  </tr>
+</table>
+</div>
+<div id="transactionsAverage">
+<table>
+  <tr><th></th><th>Spent</th><th>Income</th></tr>
+  <tr>
+      <td>Average:</td><td money="{{average.spent | currency:'$':0}}"></td><td money="{{average.income | currency:'$':0}}"></td>
+  </tr>
+</table>
+</div>
+</div>
+</body>
+</html> 

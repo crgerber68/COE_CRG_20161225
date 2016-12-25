@@ -1,0 +1,38 @@
+#dashboard {
+	font-size:16px;
+	align:center;
+    border-style: solid;
+}
+
+#transactionFilter {
+	color:green;
+    border-style: none none dashed none;
+}
+
+#transactionFilter.input[type="checkbox"] {
+	text-indent:10em;
+}
+
+#monthlyTransactions {
+    border-style: none none dashed none;
+}
+
+#transactionsAverage {
+	color:green;
+    font-weight: bold;
+}
+
+td[money] {
+    text-align: right;
+}
+
+td[money]:after {
+   content: attr(money);
+}
+
+td[money^="-"]:after {
+   color: red;
+}
+
+
+
