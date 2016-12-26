@@ -11,13 +11,5 @@
             <param-value>com.capitalone.CapitalOneRestApi</param-value>
         </init-param>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>FrontOffice</servlet-name>
-        <url-pattern>/resources/*</url-pattern>
-    </servlet-mapping> 
-    <servlet-mapping>
-        <servlet-name>FrontOffice</servlet-name>
-        <url-pattern>/resources/css/*</url-pattern>
-    </servlet-mapping> 
 </web-app>
  
